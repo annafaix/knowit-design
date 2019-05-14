@@ -7,30 +7,47 @@ $box-color-light-coral: #F57E7E;
 $box-color-light-blue: #D6E1EC;
 $box-color-light-violet:#DEE1EC; 
 
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+@mixin tablet-portrait{
+  @media (min-width: 600px) { @content; }
+}
+@mixin tablet-landscape {
+  @media (min-width: 900px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1200px) { @content; }
+}
+
+
 body{
   padding: 0;
   margin:0;
-  background-color: $box-color-corn;
   font-family: $font-family;
+  // box-sizing: border-box;
 
   header{
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
 
     .knowit-logo{
       width: 119px; //134
       height: 29px;
-      // position: absolute;
+      position: absolute;
     }
     .hamburger-menu{
-      // display: none;
+      display: none;
       width:33.33px;
       height: 25.53px;
     }
     .desktop-menu{    
       list-style: none;
       display: flex;
-
+      
+      @include mobile {
+       display:none
+      }
       li{
         color: $secondary-font-color;
         display: flex;
@@ -38,32 +55,103 @@ body{
         font-weight: bold;
         text-shadow: 1px 3px 7px rgba(0,0,0,0.5);
 
-        .jobb-number{
+        .jobb-offers-number{
           color: $secondary-font-color;
           background-color: $box-color-light-coral;
           border-radius: 50%;
           font-size: 11px;
           line-height: 15px;
           height: 15px;
+          padding: 3px;
         }
       }
      }
     
   }
   main{
-    .intro-container img{
+    .intro-container .intro-img{
       width:100%;
-      position: absolute;
-      top:-150px;
+      position: relative;
+      top:-190px;
       z-index: -1;
-    }
-    .heading-container h1{
-      font-size: 53px;
-      font-weight: bold;
-      color:$secondary-font-color;
-      text-transform: uppercase;
-      text-align: center
 
+      @include mobile {
+        top:0;
+      }
+
+    }
+    .heading-container {
+      text-align: center;
+      color:$secondary-font-color;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+
+        h1{
+          font-size: 53px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        p{
+          font-size: 18px;
+          line-height:28px;
+      }
+    }
+    .selection-container-row{
+      margin-top: 20px;
+      display:flex;
+      flex-direction: row;
+      font-family: $font-family;
+
+      .box-container{
+        display: flex;
+        flex-direction: column;
+        height: 317px;
+        width:536px;
+        padding: 2.5rem 1.875rem 4.5rem 1.875rem;
+        border: 1px solid black;
+        
+        background-repeat: no-repeat;
+
+        .container-img{
+          background-size: cover;
+          height: 268px;
+          background-position: center;
+        
+          &--one{
+            @extend .container-img;
+            background-color: $box-color-corn;
+            background-image: url("/dist/img/knowit-karriarmojligheter-2.jpg");
+          }
+          &--two{
+            @extend .container-img;
+            background-color: $box-color-light-blue;
+            background-image: url("/dist/img/knowit-karriarmojligheter-3.jpg")
+          }
+          &--three{
+            @extend .container-img;
+            background-color: $box-color-light-violet;
+            background-image: url("/dist/img/knowit-karriarmojligheter-1.jpg")
+          }
+      }
+       h4{
+         font-size: 24px;
+         font-family: $font-family;
+         font-weight: bold;
+       }
+       p{
+         font-family: $font-family;
+         font-size: 18px;
+         line-height: 30px;
+         text-align: left;
+       }
+       a{
+         text-transform: uppercase;
+         text-decoration: none;
+       }
+      }
     }
   }
  
