@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #F3E9E2;
+  font-family: "Open Sans"; }
+  body header {
+    display: flex; }
+    body header .knowit-logo {
+      width: 119px;
+      height: 29px; }
+    body header .hamburger-menu {
+      width: 33.33px;
+      height: 25.53px; }
+    body header .desktop-menu {
+      list-style: none;
+      display: flex; }
+      body header .desktop-menu li {
+        color: #FFFFFF;
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 1px 3px 7px rgba(0, 0, 0, 0.5); }
+        body header .desktop-menu li .jobb-number {
+          color: #FFFFFF;
+          background-color: #F57E7E;
+          border-radius: 50%;
+          font-size: 11px;
+          line-height: 15px;
+          height: 15px; }
+  body main .intro-container img {
+    width: 100%;
+    position: absolute;
+    top: -150px;
+    z-index: -1; }
+  body main .heading-container h1 {
+    font-size: 53px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: center; }

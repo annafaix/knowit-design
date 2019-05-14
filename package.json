@@ -1,0 +1,15 @@
+{
+  "name": "knowit_kodtest1",
+  "version": "1.0.0",
+  "description": "Arbetsprov för knowit - uppgift 1",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o  dist/css/ --recursive",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anna Faixová",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
