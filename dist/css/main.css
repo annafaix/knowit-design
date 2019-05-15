@@ -7,16 +7,20 @@ body {
     justify-content: space-between; }
     body header .knowit-logo {
       width: 119px;
-      height: 29px;
-      position: absolute; }
+      height: 29px; }
     body header .hamburger-menu {
       display: none;
       width: 33.33px;
       height: 25.53px; }
+      @media (max-width: 900px) {
+        body header .hamburger-menu {
+          display: block; } }
     body header .desktop-menu {
       list-style: none;
-      display: flex; }
-      @media (max-width: 599px) {
+      display: flex;
+      padding: 0;
+      text-align: left; }
+      @media (max-width: 900px) {
         body header .desktop-menu {
           display: none; } }
       body header .desktop-menu li {
@@ -31,66 +35,97 @@ body {
           border-radius: 50%;
           font-size: 11px;
           line-height: 15px;
-          height: 15px;
-          padding: 3px; }
-  body main .intro-container .intro-img {
-    width: 100%;
-    position: relative;
-    top: -190px;
-    z-index: -1; }
-    @media (max-width: 599px) {
-      body main .intro-container .intro-img {
-        top: 0; } }
-  body main .heading-container {
-    text-align: center;
-    color: #FFFFFF;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%; }
-    body main .heading-container h1 {
-      font-size: 53px;
-      font-weight: bold;
-      text-transform: uppercase; }
-    body main .heading-container p {
-      font-size: 18px;
-      line-height: 28px; }
-  body main .selection-container-row {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    font-family: "Open Sans"; }
-    body main .selection-container-row .box-container {
-      display: flex;
-      flex-direction: column;
-      height: 317px;
-      width: 536px;
-      padding: 2.5rem 1.875rem 4.5rem 1.875rem;
-      border: 1px solid black;
-      background-repeat: no-repeat; }
-      body main .selection-container-row .box-container .container-img, body main .selection-container-row .box-container .container-img--one, body main .selection-container-row .box-container .container-img--two, body main .selection-container-row .box-container .container-img--three {
-        background-size: cover;
-        height: 268px;
-        background-position: center; }
-        body main .selection-container-row .box-container .container-img--one {
-          background-color: #F3E9E2;
-          background-image: url("/dist/img/knowit-karriarmojligheter-2.jpg"); }
-        body main .selection-container-row .box-container .container-img--two {
-          background-color: #D6E1EC;
-          background-image: url("/dist/img/knowit-karriarmojligheter-3.jpg"); }
-        body main .selection-container-row .box-container .container-img--three {
-          background-color: #DEE1EC;
-          background-image: url("/dist/img/knowit-karriarmojligheter-1.jpg"); }
-      body main .selection-container-row .box-container h4 {
-        font-size: 24px;
-        font-family: "Open Sans";
-        font-weight: bold; }
-      body main .selection-container-row .box-container p {
-        font-family: "Open Sans";
+          height: 22px;
+          width: 22px;
+          text-align: center;
+          align-content: center; }
+  body main {
+    width: 100%; }
+    body main .intro-img {
+      width: 100%;
+      position: relative;
+      top: -190px;
+      z-index: -1;
+      background-size: 837px; }
+      @media (max-width: 599px) {
+        body main .intro-img {
+          top: 0;
+          z-index: -1; } }
+      @media (max-width: 900px) {
+        body main .intro-img {
+          top: 0;
+          z-index: -1; } }
+    body main .heading-container {
+      text-align: center;
+      color: #FFFFFF;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: auto; }
+      @media (max-width: 900px) {
+        body main .heading-container {
+          color: #000000;
+          display: block;
+          width: 90%; } }
+      body main .heading-container h1 {
+        font-size: 53px;
+        font-weight: bold;
+        text-transform: uppercase; }
+        @media (max-width: 900px) {
+          body main .heading-container h1 {
+            font-size: 22px; } }
+      body main .heading-container p {
         font-size: 18px;
-        line-height: 30px;
-        text-align: left; }
-      body main .selection-container-row .box-container a {
-        text-transform: uppercase;
-        text-decoration: none; }
+        line-height: 28px; }
+        @media (max-width: 900px) {
+          body main .heading-container p {
+            font-size: 14px; } }
+    body main .selection-container-row {
+      display: flex;
+      flex-direction: row;
+      font-family: "Open Sans";
+      margin: 0;
+      justify-content: center;
+      align-items: center; }
+      @media (max-width: 599px) {
+        body main .selection-container-row {
+          flex-direction: column;
+          width: auto; } }
+      body main .selection-container-row .box-container, body main .selection-container-row .box-container--one, body main .selection-container-row .box-container--two, body main .selection-container-row .box-container--three {
+        display: flex;
+        flex-direction: column;
+        height: 317px;
+        max-width: 536px;
+        padding: 2rem; }
+        body main .selection-container-row .box-container--one {
+          background-color: #F3E9E2; }
+        body main .selection-container-row .box-container--two {
+          background-color: #D6E1EC; }
+        body main .selection-container-row .box-container--three {
+          background-color: #DEE1EC; }
+        body main .selection-container-row .box-container .container-img, body main .selection-container-row .box-container--one .container-img, body main .selection-container-row .box-container--two .container-img, body main .selection-container-row .box-container--three .container-img {
+          background-size: cover;
+          max-height: 268px;
+          width: auto;
+          padding: 0;
+          background-position: center;
+          background-repeat: no-repeat; }
+        body main .selection-container-row .box-container h4, body main .selection-container-row .box-container--one h4, body main .selection-container-row .box-container--two h4, body main .selection-container-row .box-container--three h4 {
+          font-size: 24px;
+          font-family: "Open Sans";
+          font-weight: bold;
+          margin: 0; }
+        body main .selection-container-row .box-container p, body main .selection-container-row .box-container--one p, body main .selection-container-row .box-container--two p, body main .selection-container-row .box-container--three p {
+          font-family: "Open Sans";
+          font-size: 18px;
+          line-height: 30px;
+          text-align: left; }
+        body main .selection-container-row .box-container a, body main .selection-container-row .box-container--one a, body main .selection-container-row .box-container--two a, body main .selection-container-row .box-container--three a {
+          text-transform: uppercase;
+          text-decoration: none;
+          color: #000000;
+          font-size: 18px;
+          text-align: left;
+          font-weight: 400; }
