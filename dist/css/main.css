@@ -1,8 +1,11 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  display: grid;
+  grid-template-areas: "header header header" "box box box"  "box box box"; }
   body header {
+    grid-area: header;
     display: flex;
     justify-content: space-between; }
     body header .knowit-logo {
@@ -56,14 +59,14 @@ body {
           top: 0;
           z-index: -1; } }
     body main .heading-container {
+      grid-area: intro;
       text-align: center;
       color: #FFFFFF;
       position: absolute;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 60%;
-      height: auto; }
+      width: 60%; }
       @media (max-width: 900px) {
         body main .heading-container {
           color: #000000;
@@ -83,22 +86,19 @@ body {
           body main .heading-container p {
             font-size: 14px; } }
     body main .selection-container-row {
+      grid-area: intro;
       display: flex;
       flex-direction: row;
       font-family: "Open Sans";
       margin: 0;
-      justify-content: center;
-      align-items: center; }
+      padding: 0;
+      justify-content: center; }
       @media (max-width: 599px) {
         body main .selection-container-row {
           flex-direction: column;
           width: auto; } }
       body main .selection-container-row .box-container, body main .selection-container-row .box-container--one, body main .selection-container-row .box-container--two, body main .selection-container-row .box-container--three {
-        display: flex;
-        flex-direction: column;
-        height: 317px;
-        max-width: 536px;
-        padding: 2rem; }
+        max-width: 536px; }
         body main .selection-container-row .box-container--one {
           background-color: #F3E9E2; }
         body main .selection-container-row .box-container--two {
