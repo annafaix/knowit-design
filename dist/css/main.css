@@ -14,15 +14,14 @@ body {
     padding: 27px; }
     body header .knowit-logo {
       min-width: 119px;
-      max-width: 119px;
-      min-height: 29px;
-      max-width: 29px; }
+      max-width: 119px; }
       @media (min-width: 1200px) {
         body header .knowit-logo {
           padding-left: 140px; } }
     body header .hamburger-menu {
+      cursor: pointer;
+      z-index: 5;
       width: 33.33px;
-      height: 25.53px;
       cursor: pointer; }
       @media (min-width: 1200px) {
         body header .hamburger-menu {
@@ -60,6 +59,7 @@ body {
     height: auto; }
     body main .intro-img {
       max-width: 100%;
+      top: -87px;
       z-index: -1;
       overflow: hidden;
       position: relative; }
@@ -69,12 +69,14 @@ body {
           top: -250px; } }
     body main .heading-container {
       color: #000000;
-      text-align: center; }
+      text-align: center;
+      position: relative;
+      top: -50px; }
       @media (min-width: 1200px) {
         body main .heading-container {
           color: #FFFFFF;
           position: absolute;
-          top: 40%;
+          top: 75%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 60%;
@@ -97,10 +99,9 @@ body {
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       width: auto;
-      margin: 27px; }
+      margin-left: 27px;
+      margin-right: 27px; }
       @media (min-width: 1200px) {
         body main .selection-container-row {
           flex-direction: row;
@@ -108,10 +109,12 @@ body {
           margin-top: 30px; } }
       body main .selection-container-row .card, body main .selection-container-row .card--one, body main .selection-container-row .card--two, body main .selection-container-row .card--three {
         margin-bottom: 27px;
-        max-height: 600px; }
+        max-width: 536px;
+        height: 600px; }
         @media (min-width: 1200px) {
           body main .selection-container-row .card, body main .selection-container-row .card--one, body main .selection-container-row .card--two, body main .selection-container-row .card--three {
-            width: 28%;
+            width: 25%;
+            max-width: 536px;
             min-height: 600px;
             margin-left: 20px; } }
         body main .selection-container-row .card--one {
@@ -124,22 +127,22 @@ body {
           width: 100%; }
           @media (min-width: 1200px) {
             body main .selection-container-row .card img, body main .selection-container-row .card--one img, body main .selection-container-row .card--two img, body main .selection-container-row .card--three img {
-              height: 250px; } }
-        body main .selection-container-row .card .container, body main .selection-container-row .card--one .container, body main .selection-container-row .card--two .container, body main .selection-container-row .card--three .container {
+              height: 270px; } }
+        body main .selection-container-row .card .card-container, body main .selection-container-row .card--one .card-container, body main .selection-container-row .card--two .card-container, body main .selection-container-row .card--three .card-container {
           margin: 20px;
           height: auto; }
-          body main .selection-container-row .card .container h4, body main .selection-container-row .card--one .container h4, body main .selection-container-row .card--two .container h4, body main .selection-container-row .card--three .container h4 {
+          body main .selection-container-row .card .card-container h4, body main .selection-container-row .card--one .card-container h4, body main .selection-container-row .card--two .card-container h4, body main .selection-container-row .card--three .card-container h4 {
             font-size: 24px;
             font-weight: bold;
             margin: 0; }
-          body main .selection-container-row .card .container p, body main .selection-container-row .card--one .container p, body main .selection-container-row .card--two .container p, body main .selection-container-row .card--three .container p {
+          body main .selection-container-row .card .card-container p, body main .selection-container-row .card--one .card-container p, body main .selection-container-row .card--two .card-container p, body main .selection-container-row .card--three .card-container p {
             font-size: 14px;
             line-height: 30px;
             text-align: left; }
             @media (min-width: 1200px) {
-              body main .selection-container-row .card .container p, body main .selection-container-row .card--one .container p, body main .selection-container-row .card--two .container p, body main .selection-container-row .card--three .container p {
+              body main .selection-container-row .card .card-container p, body main .selection-container-row .card--one .card-container p, body main .selection-container-row .card--two .card-container p, body main .selection-container-row .card--three .card-container p {
                 font-size: 18px; } }
-          body main .selection-container-row .card .container a, body main .selection-container-row .card--one .container a, body main .selection-container-row .card--two .container a, body main .selection-container-row .card--three .container a {
+          body main .selection-container-row .card .card-container a, body main .selection-container-row .card--one .card-container a, body main .selection-container-row .card--two .card-container a, body main .selection-container-row .card--three .card-container a {
             text-transform: uppercase;
             text-decoration: none;
             color: #000000;
@@ -147,7 +150,7 @@ body {
             text-align: left;
             font-weight: 400;
             border-bottom: 3px solid #FFFFFF; }
-            body main .selection-container-row .card .container a:hover, body main .selection-container-row .card--one .container a:hover, body main .selection-container-row .card--two .container a:hover, body main .selection-container-row .card--three .container a:hover {
+            body main .selection-container-row .card .card-container a:hover, body main .selection-container-row .card--one .card-container a:hover, body main .selection-container-row .card--two .card-container a:hover, body main .selection-container-row .card--three .card-container a:hover {
               border-bottom: 3px solid #000000; }
       body main .selection-container-row .box-container {
         height: 500px;

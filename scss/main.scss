@@ -28,10 +28,6 @@ body{
   padding: 0;
   margin:0;
   font-family: $font-family;
-
-  // grid-template-areas: 
-  // "header header header"
-  // "main main main";
   
   header{
     display: flex;
@@ -39,13 +35,12 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 27px;
-    // height: 100px;
 
     .knowit-logo{
       min-width: 119px; //134
       max-width: 119px;
-      min-height: 29px;
-      max-width: 29px;
+      // min-height: 29px;
+      // max-width: 29px;
       // margin-left: 27px;
       @include desktop{
         padding-left:140px ;
@@ -53,8 +48,12 @@ body{
      
     }
     .hamburger-menu{
+      cursor: pointer;
+      z-index: 5;
+      // position: fixed;
       width:33.33px;
-      height: 25.53px;
+      // left: ;
+      // height: 25.53px;
       // padding: 27px;
       cursor: pointer;
       @include desktop {
@@ -102,6 +101,7 @@ body{
   
     .intro-img{
       max-width:100%;
+      top:-87px;
       z-index: -1;
       overflow: hidden;
       position: relative;
@@ -114,10 +114,12 @@ body{
     .heading-container{
       color: $primary-font-color;
       text-align: center;
+      position: relative;
+      top: -50px;
       @include desktop{
         color:$secondary-font-color;
         position: absolute;
-        top: 40%;
+        top: 75%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 60%;
@@ -146,10 +148,11 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items:center;
+    // justify-content: center;
+    // align-items:center;
     width: auto;
-    margin: 27px;
+    margin-left: 27px;
+    margin-right: 27px;
     
     @include desktop{
       flex-direction: row;
@@ -159,9 +162,11 @@ body{
       }
       .card{
         margin-bottom: 27px;
-        max-height: 600px;
+        max-width: 536px;
+        height: 600px;
         @include desktop{
-          width:28%;
+          width:25%;
+          max-width: 536px;
           min-height: 600px;
           margin-left: 20px;
         }
@@ -181,10 +186,10 @@ body{
         img{
           width: 100%;
           @include desktop{
-            height: 250px;
+            height: 270px;
           }
         }
-      .container {
+      .card-container {
         margin: 20px;
         height: auto;
         h4{
@@ -196,6 +201,7 @@ body{
           font-size: 14px;
           line-height: 30px;
           text-align: left;
+        
     
           @include desktop{
             font-size: 18px;
