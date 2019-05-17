@@ -5,7 +5,8 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans"; }
+  font-family: "Open Sans";
+  box-sizing: border-box; }
   body header {
     display: flex;
     justify-items: center;
@@ -26,12 +27,12 @@ body {
           display: none; } }
     body header .desktop-menu {
       list-style: none;
-      display: none;
-      padding-right: 140px;
-      text-align: left; }
+      display: none; }
       @media (min-width: 1200px) {
         body header .desktop-menu {
-          display: flex; } }
+          display: flex;
+          padding-right: 100px;
+          text-align: left; } }
       body header .desktop-menu li {
         color: #FFFFFF;
         display: flex;
@@ -57,7 +58,7 @@ body {
     width: 100%;
     height: auto; }
     body main .intro-img {
-      max-width: 100%;
+      width: 100%;
       top: -87px;
       z-index: -1;
       overflow: hidden;
@@ -76,11 +77,12 @@ body {
         body main .heading-container {
           color: #FFFFFF;
           position: absolute;
-          top: 50%;
+          top: 450px;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 60%;
-          height: auto; } }
+          height: auto;
+          margin: 0; } }
       body main .heading-container h1 {
         font-size: 22px;
         font-weight: bold;
@@ -103,7 +105,8 @@ body {
       align-items: center;
       width: auto;
       margin-left: 27px;
-      margin-right: 27px; }
+      margin-right: 27px;
+      top: -100px; }
       @media (min-width: 1200px) {
         body main .selection-container-row {
           flex-direction: row;
@@ -111,11 +114,9 @@ body {
           margin-top: 30px; } }
       body main .selection-container-row .card, body main .selection-container-row .card--one, body main .selection-container-row .card--two, body main .selection-container-row .card--three {
         margin-bottom: 27px;
-        max-width: 536px; }
+        max-width: 450px; }
         @media (min-width: 1200px) {
           body main .selection-container-row .card, body main .selection-container-row .card--one, body main .selection-container-row .card--two, body main .selection-container-row .card--three {
-            width: 25%;
-            max-width: 536px;
             min-height: 600px;
             margin-left: 20px; } }
         body main .selection-container-row .card--one {
@@ -125,14 +126,15 @@ body {
         body main .selection-container-row .card--three {
           background-color: #DEE1EC; }
         body main .selection-container-row .card img, body main .selection-container-row .card--one img, body main .selection-container-row .card--two img, body main .selection-container-row .card--three img {
-          width: 100%; }
+          width: 100%;
+          height: auto; }
           @media (min-width: 1200px) {
             body main .selection-container-row .card img, body main .selection-container-row .card--one img, body main .selection-container-row .card--two img, body main .selection-container-row .card--three img {
-              height: 270px; } }
+              min-height: 250px; } }
         body main .selection-container-row .card .card-container, body main .selection-container-row .card--one .card-container, body main .selection-container-row .card--two .card-container, body main .selection-container-row .card--three .card-container {
           margin: 20px;
           height: auto;
-          padding: 0 10px 10px 10px; }
+          padding: 0 0 20px 20px; }
           body main .selection-container-row .card .card-container h4, body main .selection-container-row .card--one .card-container h4, body main .selection-container-row .card--two .card-container h4, body main .selection-container-row .card--three .card-container h4 {
             font-size: 24px;
             font-weight: bold;
@@ -141,18 +143,20 @@ body {
             font-size: 14px;
             line-height: 25px;
             text-align: left;
-            margin-bottom: 50px; }
+            margin-bottom: 25px; }
             @media (min-width: 1200px) {
               body main .selection-container-row .card .card-container p, body main .selection-container-row .card--one .card-container p, body main .selection-container-row .card--two .card-container p, body main .selection-container-row .card--three .card-container p {
+                margin-bottom: 50px;
                 font-size: 18px;
-                line-height: 30px; } }
+                line-height: 30px;
+                padding-right: 30px; } }
           body main .selection-container-row .card .card-container a, body main .selection-container-row .card--one .card-container a, body main .selection-container-row .card--two .card-container a, body main .selection-container-row .card--three .card-container a {
             text-transform: uppercase;
             text-decoration: none;
             color: #000000;
             font-size: 18px;
             text-align: left;
-            font-weight: 400;
+            font-weight: 600;
             border-bottom: 3px solid #FFFFFF; }
             body main .selection-container-row .card .card-container a:hover, body main .selection-container-row .card--one .card-container a:hover, body main .selection-container-row .card--two .card-container a:hover, body main .selection-container-row .card--three .card-container a:hover {
               border-bottom: 3px solid #000000; }
