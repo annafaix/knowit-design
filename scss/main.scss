@@ -48,16 +48,14 @@ body{
      
     }
     .hamburger-menu{
-      cursor: pointer;
       z-index: 5;
-      // position: fixed;
       width:33.33px;
       // left: ;
       // height: 25.53px;
       // padding: 27px;
-      cursor: pointer;
       @include desktop {
         display: none;
+
       }
     }
     .desktop-menu{    
@@ -87,9 +85,10 @@ body{
           height: 20px;
           width: 20px;
           text-align: center;
-          display: inline-block;
+          align-content: center;
           padding: 0 0 0 0;
           margin-left: -5px;
+          display: block;
         }
       }
      }
@@ -115,11 +114,12 @@ body{
       color: $primary-font-color;
       text-align: center;
       position: relative;
-      top: -50px;
+      top: -100px;
+      margin-top: 30px;
       @include desktop{
         color:$secondary-font-color;
         position: absolute;
-        top: 75%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 60%;
@@ -137,7 +137,7 @@ body{
       p{
         font-size: 14px;
         line-height:28px;
-        margin: 27px;
+        margin: 30px;
         @include desktop {
           font-size: 18px;
         }
@@ -148,8 +148,8 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items:center;
+    justify-content: center;
+    align-items:center;
     width: auto;
     margin-left: 27px;
     margin-right: 27px;
@@ -163,7 +163,7 @@ body{
       .card{
         margin-bottom: 27px;
         max-width: 536px;
-        height: 600px;
+        // height: 600px;
         @include desktop{
           width:25%;
           max-width: 536px;
@@ -192,6 +192,7 @@ body{
       .card-container {
         margin: 20px;
         height: auto;
+        padding: 0 10px 10px 10px;
         h4{
           font-size: 24px;
           font-weight: bold;
@@ -199,12 +200,14 @@ body{
         }
         p{
           font-size: 14px;
-          line-height: 30px;
+          line-height: 25px;
           text-align: left;
+          margin-bottom: 50px;
         
     
           @include desktop{
             font-size: 18px;
+            line-height: 30px;
           }
         }
         a{
@@ -220,197 +223,8 @@ body{
           }
         }
       }
-    
     }
 
-
-      .box-container{
-        height: 500px;
-        border: 1px solid black;
-        margin: 27px;
-
-        background-color: #F57E7E;
-        background-size: cover;
-        margin:0;
-        background-image: url("/dist/img/knowit-karriarmojligheter-2.jpg");
-        max-width: 100%;
-        padding: 0;
-        margin-left: 27px;
-        margin-right: 27px; 
-        background-position: center;
-        @include desktop{
-          max-width: 450px;
-
-        }
-        .box-img{
-          max-height: 300px;
-          background-color: #F57E7E;
-          background-size: cover;
-         
-          margin:0;
-          max-height: 268px;
-          // max-width: 100%;
-          padding: 0;
-          background-position: center;
-          // background-repeat: no-repeat;
-
-        }
-        .box-content{
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          align-content: space-between;
-          padding: 20px;
-          h4{
-            font-size: 24px;
-            font-weight: bold;
-            margin: 0;
-          }
-          p{
-            font-size: 14px;
-            line-height: 30px;
-            text-align: left;
-            @include desktop{
-              font-size: 18px;
-            }
-          }
-          a{
-            text-transform: uppercase;
-            text-decoration: none;
-            color: $primary-font-color;
-            font-size:18px;
-            text-align: left;
-            font-weight: 400;
-            border-bottom: 3px solid $secondary-font-color;
-          }
-        }
-       
-      }
-  }
-}
-  // main{
-  //   
-  //   // grid-area: main;
-  //   // display: grid;
-  //   // grid-template-areas: "img img img" "box1 box2 box3";
-  //   .intro-img{
-  //     width:100%;
-  //     position: relative;
-  //     top:-250px;
-  //     z-index: -1;
-  //     background-size: 837;
-  //     overflow: hidden;
-  //     clip: inherit; 
-
-  //     // @include mobile {
-  //     //   top:0;
-  //     //   z-index: -1;
-  //     // }
-  //     @include tablet-landscape {
-  //       top:0;
-  //       z-index: -1;
-  //     }
-
-  //   }
-  //   .heading-container {
-  //     // grid-area: intro;
-  //     text-align: center;
-  //     // color:$secondary-font-color;
-  //     // position: absolute;
-  //     // top: 40%;
-  //     // left: 50%;
-  //     // transform: translate(-50%, -50%);
-  //     // width: 60%;
-  //     // height: auto;
-  //     @include tablet-landscape {
-  //       color:$primary-font-color;
-  //       display: block;
-  //       width: 90%;
-  //     }
-  //       h1{
-  //         font-size: 53px;
-  //         font-weight: bold;
-  //         text-transform: uppercase;
-  //         @include tablet-landscape {
-  //           font-size: 22px;
-  //         }
-          
-  //       }
-  //       p{
-  //         font-size: 18px;
-  //         line-height:28px;
-  //         @include tablet-landscape {
-  //           font-size: 14px;
-  //         }
-  //     }
-  //   }
-  //   .selection-container-row{
-  //     display:flex;
-  //     flex-direction: row;
-  //     font-family: $font-family;
-  //     margin: 0;
-  //     padding: 0;
-  //     justify-content: center;
-  //     // align-items: center;
-
-  //     @include mobile-landscape{
-
-  //       flex-direction: column;
-  //       width: auto;
-  //     }
-  //     .box-container{
-  //       display: flex;
-  //       flex-direction: column;
-  //       // height: auto;
-  //       max-width:25%;
-  
-  //       // padding: 2rem;
-  //       margin: 1rem;
-      
-  //       &--one{
-  //         @extend .box-container;
-  //          background-color: $box-color-corn;
-
-  //       }
-  //      &--two{
-  //         @extend .box-container;
-  //         background-color: $box-color-light-blue;
-  //       }
-  //      &--three{
-  //         @extend .box-container;
-  //         background-color: $box-color-light-violet;
-  //       }
-  //       .container-img{
-  //         background-size: cover;
-  //         max-height: 268px;
-  //         // width: auto;
-  //         padding: 0;
-  //         background-position: center;
-  //         background-repeat: no-repeat;
-  //     }
-  //       h4{
-  //         font-size: 24px;
-  //         font-family: $font-family;
-  //         font-weight: bold;
-  //         margin: 0;
-  //       }
-  //       p{
-  //         font-family: $font-family;
-  //         font-size: 18px;
-  //         line-height: 30px;
-  //         text-align: left;
-  //       }
-  //       a{
-  //         text-transform: uppercase;
-  //         text-decoration: none;
-  //         color: $primary-font-color;
-  //         font-size:18px;
-  //         text-align: left;
-  //         font-weight: 400;
-  //       }
-  //     }
-      
-  //   }
-  // }
- 
+   }
+  } 
 }
