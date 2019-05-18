@@ -86,10 +86,13 @@ body {
       body main .heading-container h1 {
         font-size: 22px;
         font-weight: bold;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 30px; }
         @media (min-width: 1200px) {
           body main .heading-container h1 {
-            font-size: 53px; } }
+            font-size: 53px;
+            line-height: 73px; } }
       body main .heading-container p {
         font-size: 14px;
         line-height: 28px;
@@ -112,11 +115,11 @@ body {
           flex-direction: row;
           top: -250px;
           margin-top: 30px; } }
-      body main .selection-container-row .card, body main .selection-container-row .card--one, body main .selection-container-row .card--two, body main .selection-container-row .card--three {
+      body main .selection-container-row .card {
         margin-bottom: 27px;
         max-width: 450px; }
         @media (min-width: 1200px) {
-          body main .selection-container-row .card, body main .selection-container-row .card--one, body main .selection-container-row .card--two, body main .selection-container-row .card--three {
+          body main .selection-container-row .card {
             min-height: 600px;
             margin-left: 20px; } }
         body main .selection-container-row .card--one {
@@ -125,32 +128,35 @@ body {
           background-color: #D6E1EC; }
         body main .selection-container-row .card--three {
           background-color: #DEE1EC; }
-        body main .selection-container-row .card img, body main .selection-container-row .card--one img, body main .selection-container-row .card--two img, body main .selection-container-row .card--three img {
+        body main .selection-container-row .card img {
           width: 100%;
           height: auto; }
           @media (min-width: 1200px) {
-            body main .selection-container-row .card img, body main .selection-container-row .card--one img, body main .selection-container-row .card--two img, body main .selection-container-row .card--three img {
+            body main .selection-container-row .card img {
               min-height: 250px; } }
-        body main .selection-container-row .card .card-container, body main .selection-container-row .card--one .card-container, body main .selection-container-row .card--two .card-container, body main .selection-container-row .card--three .card-container {
+        body main .selection-container-row .card .card-container {
           margin: 20px;
           height: auto;
-          padding: 0 0 20px 20px; }
-          body main .selection-container-row .card .card-container h4, body main .selection-container-row .card--one .card-container h4, body main .selection-container-row .card--two .card-container h4, body main .selection-container-row .card--three .card-container h4 {
+          padding: 0 0 20px 10px; }
+          @media (min-width: 1200px) {
+            body main .selection-container-row .card .card-container {
+              padding: 0 0 20px 20px; } }
+          body main .selection-container-row .card .card-container h4 {
             font-size: 24px;
             font-weight: bold;
             margin: 0; }
-          body main .selection-container-row .card .card-container p, body main .selection-container-row .card--one .card-container p, body main .selection-container-row .card--two .card-container p, body main .selection-container-row .card--three .card-container p {
+          body main .selection-container-row .card .card-container p {
             font-size: 14px;
             line-height: 25px;
             text-align: left;
             margin-bottom: 25px; }
             @media (min-width: 1200px) {
-              body main .selection-container-row .card .card-container p, body main .selection-container-row .card--one .card-container p, body main .selection-container-row .card--two .card-container p, body main .selection-container-row .card--three .card-container p {
+              body main .selection-container-row .card .card-container p {
                 margin-bottom: 50px;
                 font-size: 18px;
                 line-height: 30px;
                 padding-right: 30px; } }
-          body main .selection-container-row .card .card-container a, body main .selection-container-row .card--one .card-container a, body main .selection-container-row .card--two .card-container a, body main .selection-container-row .card--three .card-container a {
+          body main .selection-container-row .card .card-container a {
             text-transform: uppercase;
             text-decoration: none;
             color: #000000;
@@ -158,5 +164,5 @@ body {
             text-align: left;
             font-weight: 600;
             border-bottom: 3px solid #FFFFFF; }
-            body main .selection-container-row .card .card-container a:hover, body main .selection-container-row .card--one .card-container a:hover, body main .selection-container-row .card--two .card-container a:hover, body main .selection-container-row .card--three .card-container a:hover {
+            body main .selection-container-row .card .card-container a:hover {
               border-bottom: 3px solid #000000; }

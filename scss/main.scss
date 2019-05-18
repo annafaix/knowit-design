@@ -131,8 +131,11 @@ body{
         font-size: 22px;
         font-weight: bold;
         text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 30px;
         @include desktop {
           font-size: 53px;
+          line-height: 73px;
         } 
       }
       p{
@@ -168,21 +171,17 @@ body{
         // min-height: 600px;
         // max-width: 500px;
         // max-height: 600px;
-        // height: auto;
         @include desktop{
           min-height: 600px;
           margin-left: 20px;
         }
         &--one{
-          @extend .card;
           background-color: $box-color-corn;
         }
         &--two{
-          @extend .card;
           background-color: $box-color-light-blue;
         }
         &--three{
-          @extend .card;
           background-color: $box-color-light-violet;
         }
 
@@ -196,7 +195,10 @@ body{
       .card-container {
         margin: 20px;
         height: auto;
-        padding: 0 0 20px 20px;
+        padding: 0 0 20px 10px;
+        @include desktop{
+          padding: 0 0 20px 20px;
+        }
 
         h4{
           font-size: 24px;
